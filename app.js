@@ -15,9 +15,9 @@ app.get("/bg.jpg", function(req, res) {
 })
 app.post("/", function(req, res) {
   const query = req.body.myCountry;
-//   const appKey = daaaf679eaff9911aa11b5dbd0feec90;
+  const appKey = daaaf679eaff9911aa11b5dbd0feec90;
   // const units = metric;
-  const url = "https://api.openweathermap.org/data/2.5/weather?q=" +query+ "&units=metric&appid=daaaf679eaff9911aa11b5dbd0feec90";
+  const url = "https://api.openweathermap.org/data/2.5/weather?q=" +query+ "&units=metric&appid="+appkey;
   https.get(url, function(response) {
     console.log(response.statusCode);
 
